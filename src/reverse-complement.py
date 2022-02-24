@@ -1,6 +1,6 @@
 '''
 NAME
-	reverse-complement.py
+	reverse-complement.py Natalia
     
 VERSION
     1.0
