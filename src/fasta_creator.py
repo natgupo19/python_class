@@ -18,8 +18,7 @@ USAGE
 ARGUMENTS
 '''
 
-
-GIT# Accedemos a la secuencia del archivo solicitado
+# Accedemos a la secuencia del archivo solicitado
 seq = open("data/dna.txt")
 
 # Leemos el contenido del archivo
