@@ -12,10 +12,13 @@ DESCRIPTION
 El programa calcula el porcentaje de GC y AT en una secuencia de DNA.
 
 CATEGORY
+DNA sequence
 
 USAGE
 
+
 ARGUMENTS
+None
 '''
 
 # Solicitamos la ruta donde se encuentra el archivo con la secuencia de DNA
