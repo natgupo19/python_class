@@ -19,7 +19,7 @@ ARGUMENTS
 '''
 
 # Pedimos la secuencia de DNA al usuario
-dna = input("Introduzca una secuncia de DNA: \n")
+dna = input("Introduzca una secuencia de DNA: \n")
 
 # Contamos la cantidad de nucleótidos que hay en la secuencia y lo imprimimos al usuario
 print(f"La cantidad de A es: {dna.count('A')}.")
