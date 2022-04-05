@@ -26,7 +26,7 @@ SEE ALSO
 None
 '''
 
-# Solicitamos la ruta donde se encuentra el archivo con la secuencia de DNA
+# Solicitamos los datos al usuario
 ruta = input("Introduzca la ruta del archivo en donde se encuentra la secuencia de DNA: \n")
 
 # Accedemos a la secuencia del archivo solicitado
