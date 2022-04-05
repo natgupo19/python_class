@@ -15,9 +15,14 @@ CATEGORY
 DNA sequence
 
 USAGE
-
+El programa permite obtener el porcentaje de nucleotidos ubicados en una secuencia de DNA especifica. La secuencia de DNA 
+debe de enocntrarse dentro de un archivo, pues el programa solicita una ruta que contega dicha secuencia de interes para poder
+funcionar.
 
 ARGUMENTS
+None
+
+SEE ALSO
 None
 '''
 
