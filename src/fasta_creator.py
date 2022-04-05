@@ -12,10 +12,17 @@ DESCRIPTION
 El programa crea un archivo fasta que contenga una secuencia de DNA que se encuentra en un archivo txt
 
 CATEGORY
+DNA Sequence
 
 USAGE
+El programa permite generar un archivo en formato fasta a partir de un archivo de texto plano que contenga una
+secuencia de DNA. El archivo fasta se guaradara en una carpeta llamada data.
 
 ARGUMENTS
+None
+
+SEE ALSO
+None
 '''
 
 # Accedemos a la secuencia del archivo solicitado
