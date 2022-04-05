@@ -46,5 +46,5 @@ En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN
 
 ## License
 
-
+MIT LICENSE
 
