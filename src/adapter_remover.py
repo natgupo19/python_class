@@ -34,9 +34,6 @@ None
 '''
 
 # Abrimos el archivo
-import sre_compile
-
-
 my_file = open('data/4_input_adapters.txt')
 
 # Leemos todas las lineas y las guardamos en una lista
