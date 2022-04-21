@@ -35,58 +35,65 @@ SEE ALSO
     None
 '''
 
-# Declarar el random
+# Importar libreria random
 import random
 
-# Bienevneida y peticion de nombre
+# Dar la bienvenida y pedir nombre al usuario
 print("\n¡Bienvenidx al juego de piedra, papel o tijera!\n")
 name = input("Introduce tu nombre:\n")
 
-# Lista con opciones posibles
+# Definir las opciones validas
 options = ["piedra", "papel", "tijera"]
 
-# Pedimo la opcion al usuario
+# Pedir una opcion al usuario y estandarizar a minusculas
 choice = input(f"\n{name}, introduce la opcion que deseas elegir (piedra, papel o tijera):\n")
 choice = choice.lower()
 
-# Opcion computadora
+# Obtener la eleccion de la computadora aleatoriamente 
 computer = random.choice(options) 
 
-# Si la opcion no es valida, notificar.
+# Si la opcion no es valida, notificar y terminar el programa.
 if choice not in options:
     print("\nOpción no valida.\n")
     
-# S i la opcion es valida...
+# Si la opcion es valida...
 else:
     
-    # Imprimir las opciones elegidas por cada quien
+    # Imprimir las opciones elegidas por el usuario y la computadora
     print("\nOpciones elegidas:")
     print(f"{name}: {choice}")
     print(f"Computadora: {computer}\n")
     print("Resultado:")
     
-    # Si es la misma opcion notificar empate
+    # Comparar las dos opciones
+    # Si son iguales, indicar que hay un empate
     if computer == choice:
         print("¡EMPATE! :O\n")
     
-    # S i elige piedra
+    # Si el usuario elige "piedra"...
     elif choice == "piedra":
+        # Usuario gana si la eleccion de la computadora es "tijera"
         if computer == "tijera":
             print(f"¡Felicidades {name}, GANASTE! :)\n")
+        # Usuario pierde si la eleccion de la computadora es "papel"
         else:
             print(f"¡Lo siento {name}, PERDISTE! :(\n")
         
-    # Si elige papel
+    # Si el usuario elige "papel"...
     elif choice == "papel":
+        # Usuario gana si la eleccion de la computadora es "piedra"
         if computer == "piedra":
             print(f"¡Felicidades {name}, GANASTE! :)\n")
+        # Usuario pierde si la eleccion de la computadora es "tijera"
         else:
             print(f"¡Lo siento {name}, PERDISTE! :(\n")
         
-    # Si elige tijera
+    # Si el usuario elige "tijera"...
     elif choice == "tijera":
+        # Usuario gana si la eleccion de la computadora es "papel"
         if computer == "papel":
             print(f"¡Felicidades {name}, GANASTE! :)\n")
+        # Usuario pierde si la eleccion de la computadora es "piedra"
         else:
             print(f"¡Lo siento {name}, PERDISTE! :(\n")
             
