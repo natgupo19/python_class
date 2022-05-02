@@ -26,7 +26,7 @@ None
 '''
 
 # Accedemos a la secuencia del archivo solicitado
-seq = open("../results/dna.txt")
+seq = open("data/dna.txt")
 
 # Leemos el contenido del archivo
 seq_contents = seq.read()
@@ -35,11 +35,8 @@ seq_contents = seq.read()
 seq.close()
 
 # Abrimos y creamos el archivo fasta
-my_file = open("../data/dna.fasta", "w")
+my_file = open("data/dna.fasta", "w")
 
 # Escribimos lo que irá dentro del archivo
 my_file.write(">sequence_name \n")
 my_file.write(seq_contents)
-
-# Cerrar el archivo
-my_file.close()
