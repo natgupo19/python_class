@@ -42,12 +42,12 @@ my_dna = my_file_contents.rstrip("\n")
 nucleotidos = len(my_dna)
 
 # Calculamos el porcentaje de AT y GC en la secuencia con una regla de 3
-AT = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
-GC = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
+at_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
+gc_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
 
 # Imprimimos el porcentaje de AT y GC al usuario
-print(f"El porcentaje de AT en la secuencia es: %{AT}")
-print(f"El porcentaje de GC en la secuencia es: %{GC}")
+print(f"El porcentaje de AT en la secuencia es: %{at_percentage}")
+print(f"El porcentaje de GC en la secuencia es: %{gc_percentage}")
 
 # Cerramos el open
 my_file.close()
