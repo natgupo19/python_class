@@ -40,3 +40,6 @@ my_file = open("data/dna.fasta", "w")
 # Escribimos lo que irá dentro del archivo
 my_file.write(">sequence_name \n")
 my_file.write(seq_contents)
+
+# Cerramos el open
+my_file.close()
