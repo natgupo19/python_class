@@ -49,7 +49,8 @@ my_file2 = open('../results/seq_wo_adapters.txt', 'w')
 # Eliminar los primeros 14 elementos de cada string de la lista
 # Escribir las secuencias sin adaptadores en el nuevo archivo
 for line in all_lines:
-  my_file2.write(line[14:])
+  seq = line[14:]
+  my_file2.write(seq)
 
 # Cerramos el archivo creado
 my_file2.close()
