@@ -34,10 +34,7 @@ None
 '''
 
 # Abrimos el archivo
-import sre_compile
-
-
-my_file = open('data/4_input_adapters.txt')
+my_file = open('../data/4_input_adapters.txt')
 
 # Leemos todas las lineas y las guardamos en una lista
 all_lines = my_file.readlines()
@@ -46,16 +43,18 @@ all_lines = my_file.readlines()
 my_file.close()
 
 # Creamos un nuevo archivo que almacene las secuencias sin adaptadores
-my_file2 = open('data/seq_wo_adapters.txt', 'w')
+my_file2 = open('../results/seq_wo_adapters.txt', 'w')
 
 # Recorremos la lista con un loop
 # Eliminar los primeros 14 elementos de cada string de la lista
 # Escribir las secuencias sin adaptadores en el nuevo archivo
 for line in all_lines:
-  my_file2.write(line[14:])
+  seq = line[14:]
+  my_file2.write(seq)
 
 # Cerramos el archivo creado
 my_file2.close()
 
 # Indicamos al usuario la ruta en donde se guardo el archivo creado
-print("La ruta en la que se encuentra el archivo creado es: data/seq_wo_adapters.txt")
+print("La ruta en la que se encuentra el archivo creado es: ../results/seq_wo_adapters.txt")
+
