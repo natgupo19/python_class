@@ -45,4 +45,4 @@ my_file.write(seq_contents)
 my_file.close()
 
 # Imprimimos la ruta en donde se encuentra el archivo al usuario
-print("La ruta en la que se encuentra el archivo creado es: ../results/dna.fasta"
+print("La ruta en la que se encuentra el archivo creado es: ../results/dna.fasta")
