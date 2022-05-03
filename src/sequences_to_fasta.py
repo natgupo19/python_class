@@ -34,7 +34,7 @@ None
 '''
 
 # Abrimos el archivo
-my_file = open('../data/dna_sequences.txt')
+my_file = open('./data/dna_sequences.txt')
 
 # Leemos todas las lineas y las guardamos en una lista
 all_lines = my_file.readlines()
@@ -43,7 +43,7 @@ all_lines = my_file.readlines()
 my_file.close()
 
 # Creamos el archivo fasta
-my_file2 = open('../results/dna_sequences.fasta', 'w')
+my_file2 = open('./results/dna_sequences.fasta', 'w')
 
 # Recorremos la lista con un loop
 # Separamos los IDs de las secuencias con un split
@@ -59,4 +59,4 @@ for line in all_lines:
 my_file2.close()
 
 # Indicamos al usuario la ruta en donde se guardo el archivo creado
-print("La ruta en la que se encuentra el archivo creado es: ../results/dna_sequences.fasta")
+print("La ruta en la que se encuentra el archivo creado es: ./results/dna_sequences.fasta")
