@@ -22,7 +22,4 @@ ARGUMENTS
 dna = input("Introduzca una secuncia de DNA: \n")
 
 # Contamos la cantidad de nucleótidos que hay en la secuencia y lo imprimimos al usuario
-print(f"La cantidad de A es: {dna.count('A')}.")
-print(f"La cantidad de T es: {dna.count('T')}.")
-print(f"La cantidad de C es: {dna.count('C')}.")
-print(f"La cantidad de G es: {dna.count('G')}.")
+print(f"La cantidad de A es: {dna.count('A')}. \nLa cantidad de T es: {dna.count('T')}. \nLa cantidad de C es: {dna.count('C')}. \nLa cantidad de G es: {dna.count('G')}.")
