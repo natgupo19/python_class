@@ -14,7 +14,9 @@ Repositorio perteneciente a la clase de PYTHON para almacenar datos, tareas, scr
 
 -- src: Programas y scripts de Python.
 
--- data: Archivos input/output para progrmas.
+-- data: Archivos input para progrmas.
+
+-- results: Archivos output de los programas.
 
 -- readme
 
@@ -40,7 +42,8 @@ Para poder correr los scripts será necesario tener un equipo que cuente con pyt
 
 ## Quick start
 
-En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN para obtener datos concretos acerca de estas. 
+En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN para obtener datos concretos acerca de estas. Además, se crearan scripts que
+ayuden a lxs estudiantes a poner en práctica los conocimientos aprendidos en clase y resolver problemas con ayuda de estos.
 
 
 
