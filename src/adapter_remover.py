@@ -57,4 +57,3 @@ my_file2.close()
 
 # Indicamos al usuario la ruta en donde se guardo el archivo creado
 print("La ruta en la que se encuentra el archivo creado es: ./results/seq_wo_adapters.txt")
-
