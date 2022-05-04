@@ -29,25 +29,31 @@ None
 # Solicitamos los datos al usuario
 ruta = input("Introduzca la ruta del archivo en donde se encuentra la secuencia de DNA: \n")
 
-# Accedemos a la secuencia del archivo solicitado
-my_file = open(ruta)
+# Agregamos la estructura try-except para infromar al usuario si la ruta en la que se eucnuentra el archivo no es valida
+try: 
+    # Accedemos a la secuencia del archivo solicitado
+    my_file = open(ruta)
 
-# Leemos el contenido del archivo
-my_file_contents = my_file.read()
+    # Leemos el contenido del archivo
+    my_file_contents = my_file.read()
 
-# Quitamos el caracter de salto de linea \n
-my_dna = my_file_contents.rstrip("\n")
+    # Quitamos el caracter de salto de linea \n
+    my_dna = my_file_contents.rstrip("\n")
 
-# Contamos la cantidad de nucleotidos en la secuencia
-nucleotidos = len(my_dna)
+    # Contamos la cantidad de nucleotidos en la secuencia
+    nucleotidos = len(my_dna)
+    
+except IOError as Io_Error:
+    print(f"\nLa ruta {Io_Error.filename} no es valida, el archivo que desea leer no fue encontrado.\n")
 
-# Calculamos el porcentaje de AT y GC en la secuencia con una regla de 3
-at_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
-gc_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
+else:
+    # Calculamos el porcentaje de AT y GC en la secuencia con una regla de 3
+    at_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
+    gc_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
 
-# Imprimimos el porcentaje de AT y GC al usuario
-print(f"El porcentaje de AT en la secuencia es: %{at_percentage}")
-print(f"El porcentaje de GC en la secuencia es: %{gc_percentage}")
+    # Imprimimos el porcentaje de AT y GC al usuario
+    print(f"\nEl porcentaje de AT en la secuencia es: %{at_percentage}")
+    print(f"El porcentaje de GC en la secuencia es: %{gc_percentage}\n")
 
-# Cerramos el open
-my_file.close()
+    # Cerramos el open
+    my_file.close()

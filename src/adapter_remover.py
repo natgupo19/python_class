@@ -33,27 +33,33 @@ SEE ALSO
 None
 '''
 
-# Abrimos el archivo
-my_file = open('./data/4_input_adapters.txt')
+# Agregamos la estructura try-except para notificar al usuario si es que el archivo no se encuentra en la ruta marcada
+try: 
+  # Abrimos el archivo
+  my_file = open('./data/4_input_adapters.txt')
 
-# Leemos todas las lineas y las guardamos en una lista
-all_lines = my_file.readlines()
+  # Leemos todas las lineas y las guardamos en una lista
+  all_lines = my_file.readlines()
 
-# Cerramos el archivo
-my_file.close()
+  # Cerramos el archivo
+  my_file.close()
 
-# Creamos un nuevo archivo que almacene las secuencias sin adaptadores
-my_file2 = open('./results/seq_wo_adapters.txt', 'w')
+except IOError as Io_Error:
+    print(f"\nLa ruta {Io_Error.filename} no es valida, no se encuentra el archivo deseado.\n")
 
-# Recorremos la lista con un loop
-# Eliminar los primeros 14 elementos de cada string de la lista
-# Escribir las secuencias sin adaptadores en el nuevo archivo
-for line in all_lines:
-  seq = line[14:]
-  my_file2.write(seq)
+else:
+  # Creamos un nuevo archivo que almacene las secuencias sin adaptadores
+  my_file2 = open('./results/seq_wo_adapters.txt', 'w')
 
-# Cerramos el archivo creado
-my_file2.close()
+  # Recorremos la lista con un loop
+  # Eliminar los primeros 14 elementos de cada string de la lista
+  # Escribir las secuencias sin adaptadores en el nuevo archivo
+  for line in all_lines:
+    seq = line[14:]
+    my_file2.write(seq)
 
-# Indicamos al usuario la ruta en donde se guardo el archivo creado
-print("La ruta en la que se encuentra el archivo creado es: ./results/seq_wo_adapters.txt")
+  # Cerramos el archivo creado
+  my_file2.close()
+
+  # Indicamos al usuario la ruta en donde se guardo el archivo creado
+  print("\nLa ruta en la que se encuentra el archivo creado es: ./results/seq_wo_adapters.txt\n")
