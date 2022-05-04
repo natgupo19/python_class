@@ -20,7 +20,7 @@ secuencia de DNA. El archivo fasta se guaradara en una carpeta llamada data.
 
 ARGUMENTS
 None
-py sr
+
 SEE ALSO
 None
 '''
