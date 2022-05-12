@@ -49,7 +49,7 @@ except IOError as Io_Error:
 else:
     # Calculamos el porcentaje de AT y GC en la secuencia con una regla de 3
     at_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
-    gc_percentage = ((my_dna.count('A') + my_dna.count('T')) * 100) / (nucleotidos)
+    gc_percentage = ((my_dna.count('G') + my_dna.count('C')) * 100) / (nucleotidos)
 
     # Imprimimos el porcentaje de AT y GC al usuario
     print(f"\nEl porcentaje de AT en la secuencia es: %{at_percentage}")
