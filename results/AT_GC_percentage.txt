@@ -1,0 +1,3 @@
+La secuencia de DNA es: ACTGTACGTGCACTGATC                     
+EL porcentaje de AT en la secuencia es: 50.0 %                     
+El porcentaje de GC en la secuencia es: 50.0 %
