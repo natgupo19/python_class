@@ -29,7 +29,7 @@ None
 # Solicitamos los datos al usuario
 ruta = input("Introduzca la ruta del archivo en donde se encuentra la secuencia de DNA: \n")
 
-# Agregamos la estructura try-except para infromar al usuario si la ruta en la que se eucnuentra el archivo no es valida
+# Agregamos la estructura try-except para infromar al usuario si la ruta en la que se encuentra el archivo no es valida
 try: 
     # Accedemos a la secuencia del archivo solicitado
     my_file = open(ruta)
