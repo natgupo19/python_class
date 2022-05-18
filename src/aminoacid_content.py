@@ -70,11 +70,16 @@ args = parser.parse_args()
 
 def aminoacid_content(protein_sequence, aminoacid):
     protein_length = len(protein_sequence)
-    content = (protein_sequence.count(aminoacid) *100) / protein_length
+    content = (protein_sequence.upper().count(aminoacid.upper()) *100) / protein_length
     return(content)
 
-amino = args.aminoacid.upper()
-sequence = args.sequence.upper()
+assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "M") == 5
+assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "r") == 10
+assert aminoacid_content("msrslllrfllfllllpplp", "L") == 50
+assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "Y") == 0
+
+amino = args.aminoacid
+sequence = args.sequence
 
 percentage = aminoacid_content(sequence, amino)
 
