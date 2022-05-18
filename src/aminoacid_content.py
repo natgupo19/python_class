@@ -36,7 +36,7 @@ INPUT
     Secuencia de aminoacidos a analizar
 
 SEE ALSO
-    None
+    aminoacid_content_list.py
 '''
 
 import argparse
