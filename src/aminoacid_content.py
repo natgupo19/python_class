@@ -12,7 +12,7 @@ GITHUB
     https://github.com/natgupo19/python_class
 
 DESCRIPTION
-    Calcula el porcentaje de cada elemento de una lista de aminoacidos en una secuencia proteica 
+    Calcula el porcentaje de un aminoacido en una secuencia proteica 
 
 CATEGORY
     Protein sequence
