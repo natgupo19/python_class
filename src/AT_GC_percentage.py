@@ -18,10 +18,17 @@ CATEGORY
     DNA sequence
 
 USAGE
-    py .\src\AT_GC_percentage.py
+    py src/AT_GC_percentage.py [-h] -i path/to/input/file 
+    [-o path/to/output/file] [-r ROUND]
     
 ARGUMENTS
-    None
+    -h, --help            Show a help message and exit
+    -i path/to/input/file, --input path/to/input/file
+                          File with gene sequences
+    -o path/to/output/file, --output path/to/output/file
+                          Path for the output file
+    -r ROUND, --round ROUND
+                          Number of digits to round
 
 INPUT
     Ruta y nombre de un archivo que contiene una secuencia de DNA
