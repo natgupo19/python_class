@@ -18,15 +18,15 @@ CATEGORY
     Protein sequence
 
 USAGE
-    py .\src\aminoacid_content.py [-h] -s SEQUENCE [-a AMINOACIDS]
+    py .\src\aminoacid_content.py [-h] -s SEQUENCE -a AMINOACIDS
     [-o path/to/output/file] [-r ROUND]
 
 ARGUMENTS
     -h, --help          Show this help message and exit
     -s SEQUENCE, --sequence SEQUENCE
                         Protein sequence to analyze
-    -a AMINOACIDS, --aminoacids AMINOACIDS
-                        Amino acids to search (single-letter code)
+    -a AMINOACID, --aminoacid AMINOACID
+                        Amino acid to search (single-letter code)
     -o path/to/output/file, --output path/to/output/file
                         Path for the output file
     -r ROUND, --round ROUND
@@ -42,8 +42,8 @@ SEE ALSO
 import argparse
 
 # Crear el parser
-parser = argparse.ArgumentParser(description = "Script que calcula el \
-           contenido de una lista de aminoacidos a patir de una secuencia proteica.")
+parser = argparse.ArgumentParser(description = "Script que calcula el contenido de un\
+                                aminoacido en particular patir de una secuencia proteica.")
 
 # Agregar y almacenar los argumentos
 parser.add_argument("-s", "--sequence",
@@ -68,19 +68,28 @@ parser.add_argument("-r", "--round",
   
 args = parser.parse_args()
 
+# Declaramos la funcion
+# Estandarizamos a mayusculas
+# Calculamos el porcentaje del aminoacido en la secuencia
+# Regresamos el porcentaje
 def aminoacid_content(protein_sequence, aminoacid):
+    protein_sequence = protein_sequence.upper()
+    aminoacid = aminoacid.upper()
     protein_length = len(protein_sequence)
-    content = (protein_sequence.upper().count(aminoacid.upper()) *100) / protein_length
+    content = (protein_sequence.count(aminoacid) *100) / protein_length
     return(content)
 
+# Comprobamos que la funcion funcione correctamente con el assert
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "M") == 5
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "r") == 10
 assert aminoacid_content("msrslllrfllfllllpplp", "L") == 50
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "Y") == 0
 
-amino = args.aminoacid
-sequence = args.sequence
+# Estandarizar las secuencias y el aminoacido a mayusculas
+amino = args.aminoacid.upper()
+sequence = args.sequence.upper()
 
+# Llamamos a la funcion
 percentage = aminoacid_content(sequence, amino)
 
 # Redondear el porcentaje si fue solicitado por el usuario
@@ -95,8 +104,7 @@ if args.output:
                 \nContenido de {amino} en la secuencia: {percentage} %",
                 file=output_file)
                   
-    print(f"\nSe ha generado el archivo {args.output} con \
-            el contenido de {amino}.\n")
+    print(f"\nSe ha generado el archivo {args.output} con el contenido de {amino}.\n")
 
 # Imprimir resultado a pantalla si no fue solicitado un archivo output
 else:
