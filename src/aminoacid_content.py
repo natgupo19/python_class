@@ -73,11 +73,21 @@ args = parser.parse_args()
 # Calculamos el porcentaje del aminoacido en la secuencia
 # Regresamos el porcentaje
 def aminoacid_content(protein_sequence, aminoacid):
+    '''
+    Devuelve el porcentage de un aminoacido en una secuencia proteica
+    
+        Parametros:
+                    protein_sequence (str): secuencia proteica 
+                    aminoacid (str): aminoacido a buscar en la secuencia
+        Devuelve:
+                    acumulated_percentage (int): porcentaje del aminoacidos en la secuencia proteica
+    '''
     protein_sequence = protein_sequence.upper()
     aminoacid = aminoacid.upper()
     protein_length = len(protein_sequence)
     content = (protein_sequence.count(aminoacid) *100) / protein_length
     return(content)
+    
 
 # Comprobar que la funcion funcione correctamente con el assert
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "M") == 5

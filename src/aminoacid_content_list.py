@@ -72,6 +72,15 @@ args = parser.parse_args()
 # Declaramos la funcion
 # Estandarizamos a mayusculas
 def aminoacid_percentage(protein_sequence, aminoacid_list = ['A','I','L','M','F','W','Y','V']):
+    '''
+    Devuelve el porcentage de una lista de aminoacidos en una secuencia proteica
+    
+        Parametros:
+                    protein_sequence (str): secuencia proteica 
+                    aminoacid_list (list): lista de aminoacidos
+        Devuelve:
+                    acumulated_percentage (int): porcentaje de aminoacidos de la lista en la secuencia proteica
+    '''
     protein_sequence = protein_sequence.upper() 
     
     # Inicializamos el contador a cero
