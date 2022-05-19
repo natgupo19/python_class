@@ -79,7 +79,7 @@ def aminoacid_content(protein_sequence, aminoacid):
     content = (protein_sequence.count(aminoacid) *100) / protein_length
     return(content)
 
-# Comprobamos que la funcion funcione correctamente con el assert
+# Comprobar que la funcion funcione correctamente con el assert
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "M") == 5
 assert aminoacid_content("MSRSLLLRFLLFLLLLPPLP", "r") == 10
 assert aminoacid_content("msrslllrfllfllllpplp", "L") == 50

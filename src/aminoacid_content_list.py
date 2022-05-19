@@ -86,6 +86,12 @@ def aminoacid_percentage(protein_sequence, aminoacid_list = ['A','I','L','M','F'
         percentage = (aminoacid_count * 100) / sequence_length
         acumulated_percentage += percentage
     return acumulated_percentage
+ 
+# Comprobar que la funcion funcione correctamente con el assert   
+assert aminoacid_percentage("MSRSLLLRFLLFLLLLPPLP", ["M"]) == 5
+assert aminoacid_percentage("MSRSLLLRFLLFLLLLPPLP", ['M', 'L']) == 55
+assert aminoacid_percentage("MSRSLLLRFLLFLLLLPPLP", ['F', 'S', 'L']) == 70
+assert aminoacid_percentage("MSRSLLLRFLLFLLLLPPLP") == 65
 
 # Estandarizamos a mayusculas
 sequence = args.sequence.upper()
