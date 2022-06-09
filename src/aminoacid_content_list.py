@@ -40,6 +40,7 @@ SEE ALSO
 '''
 
 import argparse
+import re
 from itertools import count
 
 # Crear el parser
@@ -68,6 +69,10 @@ parser.add_argument("-r", "--round",
                     required=False)
   
 args = parser.parse_args()
+
+#Se crea una excepcion nueva
+class NotAminoacidError(Exception):
+    pass
 
 # Declaramos la funcion
 # Estandarizamos a mayusculas
@@ -106,58 +111,64 @@ try:
 except AssertionError as AssertionError:
     print("Algo salio mal\n")
 
-# Estandarizamos a mayusculas
+# Estandarizar a mayusculas
 sequence = args.sequence.upper()
 
-# Si el usuario da la lista de aminoacidos 
-if args.aminoacids:  
-    aminoacid_list = args.aminoacids
-    percentage = aminoacid_percentage(sequence, aminoacid_list)
-    
-    # Redondear el porcentaje si fue solicitado por el usuario
-    if args.round:
-        percentage = round(percentage, args.round)
-    
-    # Imprimir el porcentaje en el archivo indicado por el usuario si asi lo requiere
-    if args.output:
-        with open(args.output, 'w') as output_file:
+# Verificar que solo se introduzcan aminoacidos
+# Si no es asi, notificar al usuario el error
+if re.search("[^GALMFWKQESPVICYHRNDT]", sequence):
+    raise NotAminoacidError("La secuencia de aminoacidos no es valida")
+
+else:
+    # Si el usuario da la lista de aminoacidos 
+    if args.aminoacids:  
+        aminoacid_list = args.aminoacids
+        percentage = aminoacid_percentage(sequence, aminoacid_list)
+        
+        # Redondear el porcentaje si fue solicitado por el usuario
+        if args.round:
+            percentage = round(percentage, args.round)
+        
+        # Imprimir el porcentaje en el archivo indicado por el usuario si asi lo requiere
+        if args.output:
+            with open(args.output, 'w') as output_file:
+                print(f"\nSecuencia proteica: {sequence} \
+                        \nAminoacidos: {aminoacid_list} \
+                        \nContenido de {aminoacid_list} en la secuencia: {percentage} %",
+                        file=output_file)
+                    
+            print(f"\nSe ha generado el archivo {args.output} con el contenido de {aminoacid_list}.\n")
+            
+        # Se imprime el contenido de aminoacidos hidrofilicos en la secuencia dada  
+        else:
             print(f"\nSecuencia proteica: {sequence} \
                     \nAminoacidos: {aminoacid_list} \
-                    \nContenido de {aminoacid_list} en la secuencia: {percentage} %",
-                    file=output_file)
-                  
-        print(f"\nSe ha generado el archivo {args.output} con el contenido de {aminoacid_list}.\n")
-        
-    # Se imprime el contenido de aminoacidos hidrofilicos en la secuencia dada  
+                    \nContenido de {aminoacid_list} en la secuencia: {percentage} %\n")
+                
+    # Si el usuario no da la lista de aminoacidos... 
     else:
-        print(f"\nSecuencia proteica: {sequence} \
-                \nAminoacidos: {aminoacid_list} \
-                \nContenido de {aminoacid_list} en la secuencia: {percentage} %\n")
-            
-# Si el usuario no da la lista de aminoacidos... 
-else:
-    percentage = aminoacid_percentage(sequence)
-    
-    # Redondear el porcentaje si fue solicitado por el usuario
-    if args.round:
-        percentage = round(percentage, args.round)
+        percentage = aminoacid_percentage(sequence)
         
-    # Imprimir el porcentaje en el archivo indicado por el usuario si asi lo requiere
-    if args.output:
-        with open(args.output, 'w') as output_file:
+        # Redondear el porcentaje si fue solicitado por el usuario
+        if args.round:
+            percentage = round(percentage, args.round)
+            
+        # Imprimir el porcentaje en el archivo indicado por el usuario si asi lo requiere
+        if args.output:
+            with open(args.output, 'w') as output_file:
+                print(f"\nSecuencia proteica: {sequence} \
+                        \nAminoacidos hidrofilicos: A, I, L, M, F, W, Y, V \
+                        \nContenido de aminoacidos en la secuencia: {percentage} %\n",
+                        file=output_file)
+                        
+            print(f"\nSe ha generado el archivo {args.output} con el contenido de: A, I, L, M, F, W, Y, V.\n")
+            
+        # Se imprime el contenido de aminoacidos hidrofilicos en la secuencia dada
+        else:
             print(f"\nSecuencia proteica: {sequence} \
                     \nAminoacidos hidrofilicos: A, I, L, M, F, W, Y, V \
-                    \nContenido de aminoacidos en la secuencia: {percentage} %\n",
-                    file=output_file)
-                    
-        print(f"\nSe ha generado el archivo {args.output} con el contenido de: A, I, L, M, F, W, Y, V.\n")
+                    \nContenido de aminoacidos en la secuencia: {percentage} %\n")
         
-    # Se imprime el contenido de aminoacidos hidrofilicos en la secuencia dada
-    else:
-        print(f"\nSecuencia proteica: {sequence} \
-                \nAminoacidos hidrofilicos: A, I, L, M, F, W, Y, V \
-                \nContenido de aminoacidos en la secuencia: {percentage} %\n")
-    
 
 
 
