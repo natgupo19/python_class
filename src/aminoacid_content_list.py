@@ -3,7 +3,7 @@ NAME
     aminoacid_content
 
 VERSION
-    1.0
+    4.0
 
 AUTHOR
     Natalia Gutierrez Ponce
