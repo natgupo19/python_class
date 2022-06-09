@@ -44,8 +44,7 @@ Para poder correr los scripts será necesario tener un equipo que cuente con pyt
 
 ## Quick start
 
-En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN para obtener datos concretos acerca de estas. Además, se crearan scripts que
-ayuden a lxs estudiantes a poner en práctica los conocimientos aprendidos en clase y resolver problemas con ayuda de estos.
+En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN y de aminoacidos para obtener datos concretos acerca de estas. Además, se crearan scripts que ayuden a lxs estudiantes a poner en práctica los conocimientos aprendidos en clase y resolver problemas con ayuda de estos.
 
 
 
