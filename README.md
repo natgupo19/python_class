@@ -18,8 +18,13 @@ Repositorio perteneciente a la clase de PYTHON para almacenar datos, tareas, scr
 
 -- results: Archivos output de los programas.
 
--- readme
+-- test: scripts y archivos de prueba.
 
+-- README.md: Archivo de descripcion del repositorio.
+
+-- LICENSE: Licencia de uso.
+
+-- .gitignore: Archivo que especifica los archivos que Git no debe controlar.
 
 
 ## Motivation
@@ -36,14 +41,13 @@ Para poder correr los scripts será necesario tener un equipo que cuente con pyt
 
 ## Install
 
-
+Cada uno de los scripts se encuentra disponible dentro del repositorio. Si se llegara a usar alguna herramienta extra para uno de los programas, se notificara en la documentacion del mismo.
 
 
 
 ## Quick start
 
-En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN para obtener datos concretos acerca de estas. Además, se crearan scripts que
-ayuden a lxs estudiantes a poner en práctica los conocimientos aprendidos en clase y resolver problemas con ayuda de estos.
+En el repositorio se encuentran scripts que ayudan a manipular secuencias de ADN y de aminoacidos para obtener datos concretos acerca de estas. Además, se crearan scripts que ayuden a lxs estudiantes a poner en práctica los conocimientos aprendidos en clase y resolver problemas con ayuda de estos.
 
 
 
