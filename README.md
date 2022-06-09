@@ -22,7 +22,7 @@ Repositorio perteneciente a la clase de PYTHON para almacenar datos, tareas, scr
 
 -- README.md: Archivo de descripcion del repositorio.
 
--- LICENSE.md: Licencia de uso.
+-- LICENSE: Licencia de uso.
 
 -- .gitignore: Archivo que especifica los archivos que Git no debe controlar.
 
