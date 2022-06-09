@@ -139,7 +139,7 @@ else:
                     
             print(f"\nSe ha generado el archivo {args.output} con el contenido de {aminoacid_list}.\n")
             
-        # Se imprime el contenido de aminoacidos hidrofilicos en la secuencia dada  
+        # Se imprime el contenido de aminoacidos en la secuencia dada  
         else:
             print(f"\nSecuencia proteica: {sequence} \
                     \nAminoacidos: {aminoacid_list} \
