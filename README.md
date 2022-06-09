@@ -20,8 +20,11 @@ Repositorio perteneciente a la clase de PYTHON para almacenar datos, tareas, scr
 
 -- test: scripts y archivos de prueba.
 
--- readme
+-- README.md: Archivo de descripcion del repositorio.
 
+-- LICENSE.md: Licencia de uso.
+
+-- .gitignore: Archivo que especifica los archivos que Git no debe controlar.
 
 
 ## Motivation
@@ -38,7 +41,7 @@ Para poder correr los scripts será necesario tener un equipo que cuente con pyt
 
 ## Install
 
-
+Cada uno de los scripts se encuentra disponible dentro del repositorio. Si se llegara a usar alguna herramienta extra para uno de los programas, se notificara en la documentacion del mismo.
 
 
 
