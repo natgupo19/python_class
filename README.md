@@ -18,8 +18,6 @@ Repositorio perteneciente a la clase de PYTHON para almacenar datos, tareas, scr
 
 -- results: Archivos output de los programas.
 
--- test: scripts y archivos de prueba.
-
 -- README.md: Archivo de descripcion del repositorio.
 
 -- LICENSE: Licencia de uso.
