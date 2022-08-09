@@ -6,7 +6,7 @@ VERSION
 1.0
 
 AUTHOR
-Natalia Gutierrez Ponce
+Natalia Gutierrez Ponce (natgupi)
 
 DESCRIPTION
 El programa crea un archivo fasta que contenga una secuencia de DNA que se encuentra en un archivo txt
