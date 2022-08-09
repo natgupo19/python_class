@@ -6,7 +6,7 @@ VERSION
     4.0
 
 AUTHOR
-    Natalia Gutierrez Ponce
+    Natalia Gutierrez Ponce (Nat gupi)
 
 GITHUB
     https://github.com/natgupo19/python_class
