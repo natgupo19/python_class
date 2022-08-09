@@ -3,7 +3,7 @@ NAME
     AT and GC percentage
 
 VERSION
-    4.0
+    2.1
 
 AUTHOR
     Natalia Gutierrez Ponce (Nat gupi)
@@ -15,7 +15,7 @@ DESCRIPTION
     El programa calcula el porcentaje de GC y AT en una secuencia de DNA.
 
 CATEGORY
-    DNA sequence
+    DNA sequence and percentage
 
 USAGE
     py src/AT_GC_percentage.py [-h] -i path/to/input/file 
