@@ -6,7 +6,7 @@ VERSION
     1.0
 
 AUTHOR
-    Natalia Gutierrez Ponce
+    Natalia Gutierrez Ponce (natgupi)
 
 GITHUB
     https://github.com/natgupo19/python_class
