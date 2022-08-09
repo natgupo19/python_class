@@ -158,7 +158,7 @@ else:
             with open(args.output, 'w') as output_file:
                 print(f"\nSecuencia proteica: {sequence} \
                         \nAminoacidos hidrofilicos: A, I, L, M, F, W, Y, V \
-                        \nContenido de aminoacidos en la secuencia: {percentage} %\n",
+                        \nContenido de aminoacidos hidrofilicos en la secuencia: {percentage} %\n",
                         file=output_file)
                         
             print(f"\nSe ha generado el archivo {args.output} con el contenido de: A, I, L, M, F, W, Y, V.\n")
@@ -167,7 +167,7 @@ else:
         else:
             print(f"\nSecuencia proteica: {sequence} \
                     \nAminoacidos hidrofilicos: A, I, L, M, F, W, Y, V \
-                    \nContenido de aminoacidos en la secuencia: {percentage} %\n")
+                    \nContenido de aminoacidos hidrofilicos en la secuencia: {percentage} %\n")
         
 
 
